@@ -4,11 +4,11 @@ let images = []
 let nice = true
 
 function preload() {
-  for (i = 0; i < 15; i++) {
-    for (y = 0; y < 15; y++) {
-      let image = loadImage("assets/img" + i + ".png");
+  for (i = 0; i < 4; i++) {
+    for (y = 0; y < 4; y++) {
+      let image = loadImage("assets/img" + i*i + ".png");
       images.push(image)
-      tiles.push(new tile(400 * i, 400 * y, images[i], 400, 400))
+      tiles.push(new tile(400 * i, 400 * y, images[1], 400, 400))
     }
   }
   print(tiles)
@@ -23,7 +23,7 @@ function draw() {
 
   for (let tile of tiles) {
     
-    tile.display();
+    tile.display(); 
   }
 
 }
